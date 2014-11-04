@@ -1,4 +1,4 @@
-package com.pgs.bazted.aatutorial.usual;
+package com.pgs.bazted.aatutorial.usual.activity;
 
 import android.content.Context;
 import android.content.Intent;
