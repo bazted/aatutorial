@@ -1,0 +1,32 @@
+
+#### Set classpath near android plugin in projects root build.gradle
+
+classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+
+#### apply apt plugin in module where you would like to use AA
+
+apply plugin: 'android-apt'
+
+### set parameters for generator in modules build.gradle
+
+ apt {
+     arguments {
+         androidManifestFile variant.processResources.manifestFile
+
+         //you can use hard-coded packageName
+         //resourcePackageName "com.app.hardcode"
+
+         resourcePackageName android.defaultConfig.applicationId
+
+         // You can set optional annotation processing options here, like these commented options:
+         // logLevel 'INFO'
+         // logFile '/var/log/aa.log'
+     }
+ }
+
+ ### set dependencies
+
+ dependencies {
+     apt "org.androidannotations:androidannotations:3.1"
+     compile "org.androidannotations:androidannotations-api:3.1"
+ }
