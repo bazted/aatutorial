@@ -1,33 +1,39 @@
 package com.pgs.bazted.aatutorial;
 
-import android.app.Activity;
-import android.app.ActionBar;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
+
+import com.pgs.bazted.aatutorial.usual.fragment.PlaceholderFragment_;
+
+import org.androidannotations.annotations.OptionsItem;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+            com.pgs.bazted.aatutorial.usual.fragment.PlaceholderFragment build = PlaceholderFragment_.builder().
+                    place("RZE k3")
+                    .build();
+
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.container, build)
                     .commit();
         }
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
