@@ -11,8 +11,10 @@ apply plugin: 'android-apt'
 
  apt {
      arguments {
+         //for andriod gradle plugin > 0.14.2
+         androidManifestFile variant.outputs[0].processResources.manifestFile
+         //for andriod gradle plugin <= 0.14.2
          androidManifestFile variant.processResources.manifestFile
-
          //you can use hard-coded packageName
          //resourcePackageName "com.app.hardcode"
 
