@@ -1,0 +1,27 @@
+#
+# generated on 2014/12/08 11:28:55
+#
+# --table-start--
+dataClass=com.pgs.bazted.db.Message
+tableName=message
+# --table-fields-start--
+# --field-start--
+fieldName=id
+id=true
+# --field-end--
+# --field-start--
+fieldName=date
+dataPersister=DATE_LONG
+# --field-end--
+# --field-start--
+fieldName=isRead
+# --field-end--
+# --field-start--
+fieldName=message
+# --field-end--
+# --field-start--
+fieldName=title
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
