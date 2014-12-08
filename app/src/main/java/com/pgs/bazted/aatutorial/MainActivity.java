@@ -3,6 +3,7 @@ package com.pgs.bazted.aatutorial;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,7 +15,7 @@ import com.pgs.bazted.aatutorial.usual.fragment.PlaceholderFragment_;
 import org.androidannotations.annotations.OptionsItem;
 
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
